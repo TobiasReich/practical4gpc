@@ -1,0 +1,110 @@
+# depslib dependency file v1.0
+1418676218 source:d:\workspacec++\practica4 principal\src\aesparser.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<AESParser.h>
+
+1418217863 d:\workspacec++\practica4 principal\include\aesparser.h
+	<vector>
+
+1418696694 source:d:\workspacec++\practica4 principal\main.cpp
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+	<AESParser.h>
+
+1419802673 source:d:\workspacec++\practica4 principal\maingl.cpp
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<GL/glext.h>
+	"Game.h"
+	<Player.h>
+	<SoundManager.h>
+	<World.h>
+	<MainGL.h>
+
+1418820054 d:\workspacec++\practica4 principal\include\aseparser.h
+	<vector>
+
+1419798824 d:\workspacec++\practica4 principal\include\maingl.h
+
+1418820404 source:d:\workspacec++\practica4 principal\src\aseparser.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<ASEParser.h>
+
+1419779626 d:\workspacec++\practica4 principal\include\world.h
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<ASEParser.h>
+
+1419802068 source:d:\workspacec++\practica4 principal\src\world.cpp
+	"World.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<Player.h>
+	<ASEParser.h>
+
+1419801361 source:d:\workspacec++\practica4 principal\src\soundmanager.cpp
+	"SoundManager.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+
+1418835265 d:\workspacec++\practica4 principal\include\soundmanager.h
+	<IL/ilut.h>
+	<IL/il.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+
+1419164425 d:\workspacec++\practica4 principal\include\player.h
+
+1419800919 source:d:\workspacec++\practica4 principal\src\player.cpp
+	"Player.h"
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+
+1419802210 d:\workspacec++\practica4 principal\include\game.h
+	<Player.h>
+	<SoundManager.h>
+	<World.h>
+
+1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
+	"Game.h"
+

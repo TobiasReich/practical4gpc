@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Prcactica4" />
+		<Option pch_mode="2" />
+		<Option compiler="mingw_compiler" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Prcactica4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="mingw_compiler" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Prcactica4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="mingw_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32" />
+			<Add option="-lopengl32" />
+			<Add option="-lglu32" />
+			<Add option="-lfreeglut" />
+			<Add option="-lDevIL" />
+			<Add option="-lILU" />
+			<Add option="-lILUT" />
+			<Add option="-lSDLmain" />
+			<Add option="-lSDL" />
+			<Add option="-lSDL_mixer" />
+		</Linker>
+		<Unit filename="MainGL.cpp" />
+		<Unit filename="include/ASEParser.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/MainGL.h" />
+		<Unit filename="include/Player.h" />
+		<Unit filename="include/SoundManager.h" />
+		<Unit filename="include/World.h" />
+		<Unit filename="src/ASEParser.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/SoundManager.cpp" />
+		<Unit filename="src/World.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

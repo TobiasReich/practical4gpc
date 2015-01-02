@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1418475840 source:d:\workspacec++\practica4\main.cpp
+	<GL/freeglut.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<AESParser.h>
+
+1418217863 d:\workspacec++\practica4\include\aesparser.h
+	<vector>
+
+1418219591 source:d:\workspacec++\practica4\src\aesparser.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<AESParser.h>
+

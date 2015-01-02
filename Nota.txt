@@ -1,0 +1,10 @@
+Resumiendo, éstas son las puntuaciones de cada parte:
+
+1-2: 	Definición de los objetos del parque					X ?
+1:  	Incorporación de texturas								X
+1:		Movimientos del ratón variando la vista del observador	X
+1:		Vista en plano cenital
+1:		Vista a través de cámaras de vigilancia
+1:		Vista multicámara
+1:		Panel de información									X
+TOTAL:	8 puntos
