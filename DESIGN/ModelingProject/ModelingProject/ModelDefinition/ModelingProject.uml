@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ea470ade-2fc7-4209-bbe4-be52488d7183"
+  name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="f5a68ca3-aa07-4173-a6ed-cd28f00e2fa5">
+      <body>Contains and draws all of its objects</body>
+      <annotatedElements>
+        <classMoniker
+          Id="8c10dc52-1f09-4721-a91c-3b95038d1a60"
+          LastKnownName="World"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="e67a8631-81f9-4145-b2fe-e59f132846d2">
+      <body>initializes OpenGL Context and program</body>
+      <annotatedElements>
+        <classMoniker
+          Id="295221b0-1793-4c0a-be8f-658ed0ec441d"
+          LastKnownName="main"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="cb5e69ef-8d61-4ada-ba9f-3d963a7d9b49">
+      <body>Responsible for sound and music</body>
+      <annotatedElements>
+        <classMoniker
+          Id="6245c83a-c927-40a1-8d0f-769ec9ba2088"
+          LastKnownName="SoundManager"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="b68f9d2c-855b-410b-9ef5-68efa13dce6f">
+      <body>convenience class for managing game wide properties</body>
+      <annotatedElements>
+        <classMoniker
+          Id="7c361711-8781-4168-8311-9621d8c68c55"
+          LastKnownName="Game"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="e4f7a42c-0098-487b-83d6-405b0c626684">
+      <body>convenience class for player related fields</body>
+      <annotatedElements>
+        <classMoniker
+          Id="f57907fe-f179-4fa9-b14e-6bf5a643c7f6"
+          LastKnownName="Player"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="ddbdd3f7-00bf-4b8a-aacc-11c7d4a84130">
+      <body>Importer class to load ASE-objects and generate openGL displayable values</body>
+      <annotatedElements>
+        <classMoniker
+          Id="776caf92-eacc-41f6-98b6-8b6624294e0e"
+          LastKnownName="ASEParser"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="295221b0-1793-4c0a-be8f-658ed0ec441d"
+        name="main"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="00698c0e-679f-4992-9a6e-bc5cf0c003fc"
+            isDerived="false"
+            sourceEndRoleName="main"
+            targetEndRoleName="World"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8c10dc52-1f09-4721-a91c-3b95038d1a60"
+              LastKnownName="World"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="927b2cf5-2f1d-48a1-8ee9-841a37cf509d"
+                  name="main"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f254305a-d6a5-48f6-8bfc-6f692b51ca4b"
+                  name="World"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="91fbf4ab-d1a4-4f5f-917a-3c769dc3be90"
+            isDerived="false"
+            sourceEndRoleName="main"
+            targetEndRoleName="SoundManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6245c83a-c927-40a1-8d0f-769ec9ba2088"
+              LastKnownName="SoundManager"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="694a210d-d959-4fe7-86a3-95c6d9b17b47"
+                  name="main"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="42a7cf23-2869-4100-986a-c3b93929f6df"
+                  name="SoundManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0c553369-3452-41ac-9c62-f989250e87c7"
+            isDerived="false"
+            sourceEndRoleName="main"
+            targetEndRoleName="Game"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7c361711-8781-4168-8311-9621d8c68c55"
+              LastKnownName="Game"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5895a69-2d38-4176-97ad-890f35fac1ea"
+                  name="main"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93f6057f-9ed1-4d8c-a04d-f503cb94c2ac"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="70608916-b953-44a9-b113-ac651bfbc9f8"
+            isDerived="false"
+            sourceEndRoleName="main"
+            targetEndRoleName="Player"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f57907fe-f179-4fa9-b14e-6bf5a643c7f6"
+              LastKnownName="Player"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fb63a06e-1b7d-4892-977a-232d94400c1f"
+                  name="main"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5641cdc8-80db-4c02-875d-2e17a81bfbe2"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6245c83a-c927-40a1-8d0f-769ec9ba2088"
+        name="SoundManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="776caf92-eacc-41f6-98b6-8b6624294e0e"
+        name="ASEParser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7c361711-8781-4168-8311-9621d8c68c55"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f57907fe-f179-4fa9-b14e-6bf5a643c7f6"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8c10dc52-1f09-4721-a91c-3b95038d1a60"
+        name="World"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="f2fe8d69-38c7-4376-a15c-36bf7eae6582"
+            isDerived="false"
+            sourceEndRoleName="World"
+            targetEndRoleName="ASEParser"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="776caf92-eacc-41f6-98b6-8b6624294e0e"
+              LastKnownName="ASEParser"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="802c11ca-0eb6-4bab-88ab-bcabbc189408"
+                  name="World"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3e32da8-37c7-4502-8c56-2335c53047d0"
+                  name="ASEParser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
