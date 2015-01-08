@@ -10,8 +10,10 @@
 #include <IL/il.h>
 #include <GL/gl.h>
 
+#include <GameObject.h> // Importer for ASE Files
 #include <Player.h>      // Importer for ASE Files
 #include <ASEParser.h>      // Importer for ASE Files
+
 
 #define PI 3.14159265
 
