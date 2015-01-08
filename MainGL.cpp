@@ -441,6 +441,7 @@ void processKeypressed() {
             soundManager.playCharacterHitSound();
         }
     }
+
     // CURSOR KEYS -------------------------
     if (uPPressed) {             // CURSOR UP
         if (player.rotUpDown < 89)

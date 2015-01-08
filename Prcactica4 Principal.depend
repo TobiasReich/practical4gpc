@@ -108,3 +108,89 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
+1419802673 source:d:\git\projekte\practical4gpc\maingl.cpp
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<GL/glext.h>
+	"Game.h"
+	<Player.h>
+	<SoundManager.h>
+	<World.h>
+	<MainGL.h>
+
+1419802210 d:\git\projekte\practical4gpc\include\game.h
+	<Player.h>
+	<SoundManager.h>
+	<World.h>
+
+1419164425 d:\git\projekte\practical4gpc\include\player.h
+
+1418835265 d:\git\projekte\practical4gpc\include\soundmanager.h
+	<IL/ilut.h>
+	<IL/il.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+
+1419779626 d:\git\projekte\practical4gpc\include\world.h
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<ASEParser.h>
+
+1418820054 d:\git\projekte\practical4gpc\include\aseparser.h
+	<vector>
+
+1419798824 d:\git\projekte\practical4gpc\include\maingl.h
+
+1418820404 source:d:\git\projekte\practical4gpc\src\aseparser.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<ASEParser.h>
+
+1419786488 source:d:\git\projekte\practical4gpc\src\game.cpp
+	"Game.h"
+
+1419800919 source:d:\git\projekte\practical4gpc\src\player.cpp
+	"Player.h"
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+
+1419801361 source:d:\git\projekte\practical4gpc\src\soundmanager.cpp
+	"SoundManager.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<SDL/SDL.h>
+	<SDL/SDL_mixer.h>
+
+1419802068 source:d:\git\projekte\practical4gpc\src\world.cpp
+	"World.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<math.h>
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<Player.h>
+	<ASEParser.h>
+
