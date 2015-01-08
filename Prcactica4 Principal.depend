@@ -124,10 +124,10 @@
 	<World.h>
 	<MainGL.h>
 
-1419802210 d:\git\projekte\practical4gpc\include\game.h
-	<Player.h>
-	<SoundManager.h>
-	<World.h>
+1420761349 d:\git\projekte\practical4gpc\include\game.h
+	"Player.h"
+	"SoundManager.h"
+	"World.h"
 
 1419164425 d:\git\projekte\practical4gpc\include\player.h
 
@@ -137,7 +137,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1419779626 d:\git\projekte\practical4gpc\include\world.h
+1420761366 d:\git\projekte\practical4gpc\include\world.h
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -146,7 +146,7 @@
 	<IL/ilut.h>
 	<IL/il.h>
 	<GL/gl.h>
-	<ASEParser.h>
+	"ASEParser.h"
 
 1418820054 d:\git\projekte\practical4gpc\include\aseparser.h
 	<vector>
@@ -193,4 +193,9 @@
 	<GL/gl.h>
 	<Player.h>
 	<ASEParser.h>
+
+1420761128 source:d:\git\projekte\practical4gpc\src\gameobject.cpp
+	"GameObject.h"
+
+1420761165 d:\git\projekte\practical4gpc\include\gameobject.h
 

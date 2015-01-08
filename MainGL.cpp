@@ -19,10 +19,10 @@
 #include <GL/glext.h>
 
 #include "Game.h"
-#include <Player.h>         // Class responsible for sound & music
-#include <SoundManager.h>   // Class responsible for sound & music
-#include <World.h>          // World Class
-#include <MainGL.h>         // Header for MainGL with used methods
+#include "Player.h"         // Class responsible for sound & music
+#include "SoundManager.h"   // Class responsible for sound & music
+#include "World.h"          // World Class
+#include "MainGL.h"         // Header for MainGL with used methods
 
 // ------- DEFINITIONS -------
 

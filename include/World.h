@@ -11,7 +11,7 @@
 #include <IL/il.h>
 #include <GL/gl.h>
 
-#include <ASEParser.h>      // Importer for ASE Files
+#include "ASEParser.h"     // Importer for ASE Files
 
 using namespace std;
 

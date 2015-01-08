@@ -1,9 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <Player.h>         // Class responsible for sound & music
-#include <SoundManager.h>   // Class responsible for sound & music
-#include <World.h>          // World Class
+#include "Player.h"         // Player related class
+#include "SoundManager.h"   // Class responsible for sound & music
+#include "World.h"          // World Class
 
 class Game
 {
