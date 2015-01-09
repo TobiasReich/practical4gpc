@@ -112,14 +112,9 @@ class World
         // OBJECT GENERATION and World drawing
         void createGroundPatchDL(void);
         void createImportedObjectDL(void);
-        void createHouseDL(void);
-        void createTowerDL(void);
-        void createMoonDL(void);
         void createStarDL(void);
         void createTreeDLs(void);
         void initTreePositions(void);
-        void createLakeDL(void);
-        void createSkylineDL(void);
 
         void drawStars(void);
         void drawImportedObject(void);
@@ -137,8 +132,6 @@ class World
         // Collision detection
         bool isNearTo(float newX, float newZ, Position2D &target);
         bool isNearToHouse(float newX, float newZ);
-
-
 };
 
 #endif // WORLD_H
