@@ -5,10 +5,6 @@
 #include <iostream>
 #include <math.h>
 
-#include <GL/freeglut.h>
-#include <IL/ilut.h>
-#include <IL/il.h>
-#include <GL/gl.h>
 
 #include "GameObject.h"     // Drawable GameObject
 #include "Player.h"         // Player related class
@@ -19,6 +15,7 @@
 
 using namespace std;
 
+GameObject go;              // Test Object
 
 World::World() {
     //ctor
@@ -714,6 +711,8 @@ void World::drawWorld(void){
 
     drawFence();            // At the end (after towers & ground) since uses blending!!!
     drawTrees();            // After the fence since the grass is transparent
+
+    go.draw();              // Test for drawing a GO by itself.
 }
 
 /** Draws the iported AES object (Teapot, Box...)

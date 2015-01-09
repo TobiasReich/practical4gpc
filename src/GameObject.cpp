@@ -17,3 +17,9 @@ GameObject::~GameObject()
 {
     //dtor
 }
+
+
+void GameObject::draw()
+{
+    // DRAW ME
+}

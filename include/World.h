@@ -7,8 +7,6 @@
 #include <math.h>
 
 #include <GL/freeglut.h>
-#include <IL/ilut.h>
-#include <IL/il.h>
 #include <GL/gl.h>
 
 #include "ASEParser.h"     // Importer for ASE Files

@@ -108,7 +108,7 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
-1420729219 source:d:\git\projekte\practical4gpc\maingl.cpp
+1420761309 source:d:\git\projekte\practical4gpc\maingl.cpp
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -119,32 +119,28 @@
 	<GL/gl.h>
 	<GL/glext.h>
 	"Game.h"
-	<Player.h>
-	<SoundManager.h>
-	<World.h>
-	<MainGL.h>
+	"Player.h"
+	"SoundManager.h"
+	"World.h"
+	"MainGL.h"
 
-1420761349 d:\git\projekte\practical4gpc\include\game.h
+1420761387 d:\git\projekte\practical4gpc\include\game.h
 	"Player.h"
 	"SoundManager.h"
 	"World.h"
 
 1419164425 d:\git\projekte\practical4gpc\include\player.h
 
-1418835265 d:\git\projekte\practical4gpc\include\soundmanager.h
-	<IL/ilut.h>
-	<IL/il.h>
+1420762585 d:\git\projekte\practical4gpc\include\soundmanager.h
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420761366 d:\git\projekte\practical4gpc\include\world.h
+1420762609 d:\git\projekte\practical4gpc\include\world.h
 	<cstdio>
 	<cstdlib>
 	<iostream>
 	<math.h>
 	<GL/freeglut.h>
-	<IL/ilut.h>
-	<IL/il.h>
 	<GL/gl.h>
 	"ASEParser.h"
 
@@ -153,12 +149,12 @@
 
 1419798824 d:\git\projekte\practical4gpc\include\maingl.h
 
-1418820404 source:d:\git\projekte\practical4gpc\src\aseparser.cpp
+1420761329 source:d:\git\projekte\practical4gpc\src\aseparser.cpp
 	<iostream>
 	<string>
 	<fstream>
 	<vector>
-	<ASEParser.h>
+	"ASEParser.h"
 
 1419786488 source:d:\git\projekte\practical4gpc\src\game.cpp
 	"Game.h"
@@ -181,20 +177,19 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1419802068 source:d:\git\projekte\practical4gpc\src\world.cpp
+1420762428 source:d:\git\projekte\practical4gpc\src\world.cpp
 	"World.h"
 	<cstdio>
 	<cstdlib>
 	<iostream>
 	<math.h>
 	<GL/freeglut.h>
-	<IL/ilut.h>
-	<IL/il.h>
 	<GL/gl.h>
-	<Player.h>
-	<ASEParser.h>
+	"GameObject.h"
+	"Player.h"
+	"ASEParser.h"
 
-1420761128 source:d:\git\projekte\practical4gpc\src\gameobject.cpp
+1420762547 source:d:\git\projekte\practical4gpc\src\gameobject.cpp
 	"GameObject.h"
 
 1420761165 d:\git\projekte\practical4gpc\include\gameobject.h

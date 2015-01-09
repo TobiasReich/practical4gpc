@@ -1,9 +1,7 @@
 #include "Player.h"
 
 #include <GL/freeglut.h>
-#include <IL/ilut.h>
-#include <IL/il.h>
-#include <GL/gl.h>
+
 
 float const Player::PLAYER_SIZE = 1.1f;      // Player Size for collision calculation
 const float Player::WALKING_SPEED = 0.2f;    // Walking speed

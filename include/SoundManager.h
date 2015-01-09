@@ -1,8 +1,6 @@
 #ifndef SOUNDMANAGER_H
 #define SOUNDMANAGER_H
 
-#include <IL/ilut.h>
-#include <IL/il.h>
 #include <SDL/SDL.h>
 #include <SDL/SDL_mixer.h>
 
