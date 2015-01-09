@@ -56,11 +56,32 @@
     </comment>
     <comment
       Id="ddbdd3f7-00bf-4b8a-aacc-11c7d4a84130">
-      <body>Importer class to load ASE-objects and generate openGL displayable values</body>
+      <body>Importer class to load
+ASE-objects and generate openGL displayable values</body>
       <annotatedElements>
         <classMoniker
           Id="776caf92-eacc-41f6-98b6-8b6624294e0e"
           LastKnownName="ASEParser"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="5cde7982-2ea3-4c64-8caa-0e3c3196d8a1">
+      <body>virtual class for all drawable objects</body>
+      <annotatedElements>
+        <classMoniker
+          Id="d480ca85-3c02-444a-b054-3928d153484e"
+          LastKnownName="GameObject"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="3316525a-7f2a-46a8-a332-b6c8a6fb6a51">
+      <body>Examples for sub classes of GameObject</body>
+      <annotatedElements>
+        <classMoniker
+          Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb"
+          LastKnownName="Tower"
           LastKnownLocation="ModelingProject.uml" />
       </annotatedElements>
     </comment>
@@ -326,8 +347,141 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="f7702415-4f2a-415a-bdfa-256620ef39e8"
+            isDerived="false"
+            sourceEndRoleName="World"
+            targetEndRoleName="GameObject"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d480ca85-3c02-444a-b054-3928d153484e"
+              LastKnownName="GameObject"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac0f85b0-c821-48e7-b253-281f4f3a9044"
+                  name="World"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="497ef06e-12c6-406f-bcb4-1590b984ce1d"
+                  name="GameObject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d480ca85-3c02-444a-b054-3928d153484e"
+        name="GameObject"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>virtual</description>
+        <generalsInternal>
+          <generalization
+            Id="b230eff1-2529-4188-a7c1-5347fdebe94d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="058cab87-3062-4d5c-9005-33d474ef3383"
+              LastKnownName="Moon"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+          <generalization
+            Id="e9d6ae3c-7b59-4251-89a3-7bc09e5bdd9f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0ef64d05-a0bb-4dab-babe-c9f57f4105eb"
+              LastKnownName="Tree"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+          <generalization
+            Id="9743607c-83fe-4ad9-a933-fc4d745d912c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d82b1219-1fad-442b-8030-3a1d059389a9"
+              LastKnownName="House"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+          <generalization
+            Id="b13ca767-5bf9-4a9a-8610-8cf5ead8a42c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb"
+              LastKnownName="Tower"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0d5f70db-4c81-4a3d-9a40-28c47f45ac02"
+            name="create"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1944bb97-0401-4f47-950f-10ca0d172365"
+            name="draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d82b1219-1fad-442b-8030-3a1d059389a9"
+        name="House"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="058cab87-3062-4d5c-9005-33d474ef3383"
+        name="Moon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0ef64d05-a0bb-4dab-babe-c9f57f4105eb"
+        name="Tree"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb"
+        name="Tower"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

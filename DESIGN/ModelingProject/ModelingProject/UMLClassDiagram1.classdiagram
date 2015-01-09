@@ -38,26 +38,27 @@
     </comment>
     <comment Id="7bec698e-1dee-41d0-9cbc-d5cc238fe00c">
       <elementDefinition Id="ddbdd3f7-00bf-4b8a-aacc-11c7d4a84130" />
-      <body>Importer class to load ASE-objects and generate openGL displayable values</body>
+      <body>Importer class to load
+ASE-objects and generate openGL displayable values</body>
       <annotatedElements>
         <classMoniker Id="49758aeb-53e5-4bf0-b216-e35489168997" LastKnownName="ASEParser" />
       </annotatedElements>
     </comment>
+    <comment Id="11ee945d-b5e4-4dc8-9e93-5825929396de">
+      <elementDefinition Id="5cde7982-2ea3-4c64-8caa-0e3c3196d8a1" />
+      <body>virtual class for all drawable objects</body>
+      <annotatedElements>
+        <classMoniker Id="e0485a51-32a5-41ae-8fe7-55d4af259ba9" LastKnownName="GameObject" />
+      </annotatedElements>
+    </comment>
+    <comment Id="dcfacdc6-1f67-4612-b51c-cd0a41924fea">
+      <elementDefinition Id="3316525a-7f2a-46a8-a332-b6c8a6fb6a51" />
+      <body>Examples for sub classes of GameObject</body>
+      <annotatedElements>
+        <classMoniker Id="a2540626-aa22-4e15-9533-eaf69a37d307" LastKnownName="Tower" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="febd25d0-952d-4443-bf62-db1faec17345">
-      <profileInstance Id="2efb6514-8236-4e74-91fd-0b3c57f5019c" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="04753bae-3743-47ee-b3dc-5fae8a9292e5">
-      <profileInstance Id="a4bd30cb-0cd2-4d4a-939d-b2f8028f9f52" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="f5797e36-f2b3-42e4-8b72-5fb7ef196b93" name="main" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -170,11 +171,93 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="f2fe8d69-38c7-4376-a15c-36bf7eae6582" />
           </association>
+          <association Id="7f58af3c-2218-4b7f-af23-3556a255fe6c" isDerived="false" sourceEndRoleName="World" targetEndRoleName="GameObject" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e0485a51-32a5-41ae-8fe7-55d4af259ba9" LastKnownName="GameObject" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f4478c3f-eef1-4e6c-865d-bc681f5c5c61" name="World" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ac0f85b0-c821-48e7-b253-281f4f3a9044" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a5485036-6629-4e31-99d5-830cdd3e7483" name="GameObject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="497ef06e-12c6-406f-bcb4-1590b984ce1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f7702415-4f2a-415a-bdfa-256620ef39e8" />
+          </association>
         </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0485a51-32a5-41ae-8fe7-55d4af259ba9" name="GameObject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <description>virtual</description>
+        <elementDefinition Id="d480ca85-3c02-444a-b054-3928d153484e" />
+        <generalsInternal>
+          <generalization Id="62c4a9c7-1da4-44e8-bb40-b4c3816134c0" isSubstitutable="false">
+            <classMoniker Id="1edd6d81-db07-4e16-aba7-30e723556ccc" LastKnownName="Moon" />
+            <elementDefinition Id="b230eff1-2529-4188-a7c1-5347fdebe94d" />
+          </generalization>
+          <generalization Id="6d8bfac4-372c-4dec-b3fa-675f3bfd481e" isSubstitutable="false">
+            <classMoniker Id="7164476e-ac28-4c40-b868-1971964db85f" LastKnownName="Tree" />
+            <elementDefinition Id="e9d6ae3c-7b59-4251-89a3-7bc09e5bdd9f" />
+          </generalization>
+          <generalization Id="b1ab1d8f-c576-4a6d-9253-16679125d2a7" isSubstitutable="false">
+            <classMoniker Id="9ec001d2-0403-4027-a1ac-27dd8df639d7" LastKnownName="House" />
+            <elementDefinition Id="9743607c-83fe-4ad9-a933-fc4d745d912c" />
+          </generalization>
+          <generalization Id="9bd7b9b9-cb8d-44d2-bd54-afcf718d2207" isSubstitutable="false">
+            <classMoniker Id="a2540626-aa22-4e15-9533-eaf69a37d307" LastKnownName="Tower" />
+            <elementDefinition Id="b13ca767-5bf9-4a9a-8610-8cf5ead8a42c" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="0e522b34-fbcc-4ce8-bf8d-87eb148ace6a" name="create" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0d5f70db-4c81-4a3d-9a40-28c47f45ac02" />
+          </operation>
+          <operation Id="0d9d90cb-8b8a-4bb2-b217-9bf688ff191f" name="draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1944bb97-0401-4f47-950f-10ca0d172365" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9ec001d2-0403-4027-a1ac-27dd8df639d7" name="House" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d82b1219-1fad-442b-8030-3a1d059389a9" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1edd6d81-db07-4e16-aba7-30e723556ccc" name="Moon" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="058cab87-3062-4d5c-9005-33d474ef3383" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7164476e-ac28-4c40-b868-1971964db85f" name="Tree" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0ef64d05-a0bb-4dab-babe-c9f57f4105eb" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a2540626-aa22-4e15-9533-eaf69a37d307" name="Tower" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb" />
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="e7593641-948a-4721-add0-c8512fdd5dce" name="ModelingProject">
     <elementDefinition Id="ea470ade-2fc7-4209-bbe4-be52488d7183" />
+    <profileInstances>
+      <packageHasProfileInstances Id="febd25d0-952d-4443-bf62-db1faec17345">
+        <profileInstance Id="2efb6514-8236-4e74-91fd-0b3c57f5019c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="04753bae-3743-47ee-b3dc-5fae8a9292e5">
+        <profileInstance Id="a4bd30cb-0cd2-4d4a-939d-b2f8028f9f52" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
