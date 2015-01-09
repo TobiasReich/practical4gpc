@@ -37,13 +37,9 @@ class World
         GLuint starsDL;                     // The Display-List for the stars
         GLuint groundPatchDL;               // The Display-List for the ground patches
 
-
         GLuint treeSmallDL;                 // The Display-List for the small trees
         GLuint treeNormalDL;                // The Display-List for the normal trees
         GLuint treeBigDL;                   // The Display-List for the big trees
-
-        GLuint cloudsDL;                   // The Display-List for the skyline (cube)
-        GLuint skylineDL;                   // The Display-List for the skyline (cube)
 
         std::vector<World::Position2D> treeSmallPositions;
         std::vector<World::Position2D> treeNormalPositions;
@@ -85,10 +81,6 @@ class World
         GLuint texture_plant;               // texture for the tree top
 
 
-
-        GLuint texture_skyline;             // texture for the "skyline"
-        GLuint texture_clouds;              // texture for the clouds
-
         GLuint texture_player_character;     // texture for the background of the minimap
 
         const char * TEXTURE_GROUND_FILENAME    = "Data/gfx/ground.png";
@@ -100,8 +92,8 @@ class World
 
         const char * TEXTURE_PLAYER_FILENAME      = "Data/gfx/player_face.png";
 
-        const char * TEXTURE_SKYLINE_FILENAME      = "Data/gfx/skyline.png";
-        const char * TEXTURE_CLOUDS_FILENAME      = "Data/gfx/clouds.png";
+
+
 
         const float FogColor[3]={0.2f,0.3f,0.5f}; // Define a nice light grey
 

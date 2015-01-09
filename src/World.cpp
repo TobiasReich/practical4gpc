@@ -10,6 +10,7 @@
 #include "Tower.h"          // Drawable GameObject (Tower)
 #include "House.h"          // Drawable GameObject (House)
 #include "Moon.h"           // Drawable GameObject (Moon)
+#include "Skyline.h"        // Drawable GameObject (Skyline)
 #include "Lake.h"           // Drawable GameObject (Lake)
 #include "Player.h"         // Player related class
 #include "ASEParser.h"      // Importer for ASE Files
@@ -23,6 +24,7 @@ Moon moon;
 Tower tower;
 House house;
 Lake lake;
+Skyline skyline;
 
 World::World() {
     //ctor
@@ -53,12 +55,12 @@ void World::loadWorld(void){
     createTreeDLs();
     createStarDL();             // Creates a DL for stars in the sky
     initTreePositions();
-    createSkylineDL();          // Create the DL for the Skyline
 
     tower.create();
     moon.create();
     house.create();
     lake.create();
+    skyline.create();
 }
 
 
@@ -178,91 +180,6 @@ void World::createImportedObjectDL(){
     glEndList();
 }
 
-
-/** Creates the Sky Boy for the World (trees, stars...) **/
-void World::createSkylineDL(void){
-
-    cloudsDL= glGenLists(1);
-    glNewList(cloudsDL, GL_COMPILE);
-
-    glDisable(GL_LIGHTING);
-    glEnable(GL_TEXTURE_2D);
-    glEnable(GL_BLEND);
-    glBindTexture(GL_TEXTURE_2D, texture_clouds);
-
-   // CLOUDS
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-150, 00, 150);
-            glTexCoord2f(0, 1); glVertex3i(-150, 50, 150);
-            glTexCoord2f(2, 1); glVertex3i( 150, 50, 150);
-            glTexCoord2f(2, 0); glVertex3i( 150, 0, 150);
-        glEnd();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-150, 0, -150);
-            glTexCoord2f(0, 1); glVertex3i(-150, 50, -150);
-            glTexCoord2f(2, 1); glVertex3i( 150, 50, -150);
-            glTexCoord2f(2, 0); glVertex3i( 150, 0, -150);
-        glEnd();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-150, 0,-150);
-            glTexCoord2f(0, 1); glVertex3i(-150, 50, -150);
-            glTexCoord2f(2, 1); glVertex3i(-150, 50,  150);
-            glTexCoord2f(2, 0); glVertex3i(-150, 0, 150);
-        glEnd();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i( 150, 0,-150);
-            glTexCoord2f(0, 1); glVertex3i( 150, 50, -150);
-            glTexCoord2f(2, 1); glVertex3i( 150, 50,  150);
-            glTexCoord2f(2, 0); glVertex3i( 150, 0, 150);
-        glEnd();
-        // TOP
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-150, 50, 150);
-            glTexCoord2f(0, 2); glVertex3i(-150, 50, -150);
-            glTexCoord2f(2, 2); glVertex3i( 150, 50, -150);
-            glTexCoord2f(2, 0); glVertex3i( 150, 50, 150);
-        glEnd();
-   // glPopMatrix();
-
-       // glEnable(GL_LIGHTING);
-    glEndList();
-
-    // -- SKYLINE --
-
-    skylineDL = glGenLists(1);
-    glNewList(skylineDL, GL_COMPILE);
-    glBindTexture(GL_TEXTURE_2D, texture_skyline);
-
-    //glPushMatrix();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-100, 0, 100);
-            glTexCoord2f(0, 1); glVertex3i(-100, 40, 100);
-            glTexCoord2f(3, 1); glVertex3i( 100, 40, 100);
-            glTexCoord2f(3, 0); glVertex3i( 100, 0, 100);
-        glEnd();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-100, 0, -100);
-            glTexCoord2f(0, 1); glVertex3i(-100, 40, -100);
-            glTexCoord2f(3, 1); glVertex3i( 100, 40, -100);
-            glTexCoord2f(3, 0); glVertex3i( 100, 0, -100);
-        glEnd();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i(-100, 0,-100);
-            glTexCoord2f(0, 1); glVertex3i(-100, 40, -100);
-            glTexCoord2f(3, 1); glVertex3i(-100, 40,  100);
-            glTexCoord2f(3, 0); glVertex3i(-100, 0, 100);
-        glEnd();
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 0); glVertex3i( 100, 0,-100);
-            glTexCoord2f(0, 1); glVertex3i( 100, 40, -100);
-            glTexCoord2f(3, 1); glVertex3i( 100, 40,  100);
-            glTexCoord2f(3, 0); glVertex3i( 100, 0, 100);
-        glEnd();
-    //glPopMatrix();
-
-    glEnable(GL_LIGHTING);
-    glEndList();
-}
 
 /** Creates a simple Tree made of a cylinder and a sphere as top **/
 void World::createTreeDLs(){
@@ -540,7 +457,6 @@ void World::drawTowers(){
 
  /** Draws the house in the level**/
 void World::drawMoon(void){
-
     float altitude = sin(moonRot * PI / 180.0);
     glPushMatrix();
         glRotatef(moonRot, 0, 1, 0);
@@ -549,6 +465,8 @@ void World::drawMoon(void){
     glPopMatrix();
 }
 
+/** Draws the stars. They are moving in the direction
+of the moon (unlike the clouds) - just slower **/
 void World::drawStars(void){
     glPushMatrix();
         glRotatef(moonRot * 0.1, 0, 1, 0);
@@ -675,9 +593,9 @@ void World::drawLake(void){
 void World::drawSkyline(void){
     glPushMatrix();
         glRotatef(- moonRot * 0.2, 0, 1, 0);
-        glCallList(cloudsDL);
+        skyline.drawClouds();
     glPopMatrix();
-    glCallList(skylineDL);
+    skyline.draw();
 }
 
 /** This sets the moon light.

@@ -546,9 +546,6 @@ void initTextures(void){
     TextureManager::loadTextureDevil(world.TEXTURE_GRASS_FILENAME, world.texture_grass, true);
     TextureManager::loadTextureDevil(world.TEXTURE_TRUNK_FILENAME, world.texture_trunk, false);
 
-    TextureManager::loadTextureDevil(world.TEXTURE_SKYLINE_FILENAME, world.texture_skyline, true);
-    TextureManager::loadTextureDevil(world.TEXTURE_CLOUDS_FILENAME, world.texture_clouds, false);
-
 
     // HUD textures
     TextureManager::loadTextureDevil(TEXTURE_COMPASS_NEEDLE_FILENAME, texture_minimap_compass, true);

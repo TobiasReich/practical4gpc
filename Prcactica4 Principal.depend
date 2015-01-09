@@ -108,7 +108,7 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
-1420769590 source:d:\git\projekte\practical4gpc\maingl.cpp
+1420770111 source:d:\git\projekte\practical4gpc\maingl.cpp
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -136,7 +136,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420769615 d:\git\projekte\practical4gpc\include\world.h
+1420770203 d:\git\projekte\practical4gpc\include\world.h
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -175,7 +175,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420765634 source:d:\git\projekte\practical4gpc\src\world.cpp
+1420770258 source:d:\git\projekte\practical4gpc\src\world.cpp
 	"World.h"
 	<cstdio>
 	<cstdlib>
@@ -183,6 +183,10 @@
 	<math.h>
 	"GameObject.h"
 	"Tower.h"
+	"House.h"
+	"Moon.h"
+	"Skyline.h"
+	"Lake.h"
 	"Player.h"
 	"ASEParser.h"
 
@@ -233,6 +237,15 @@
 	"TextureManager.h"
 
 1420769619 d:\git\projekte\practical4gpc\include\lake.h
+	<GameObject.h>
+	<GL/freeglut.h>
+
+1420770170 source:d:\git\projekte\practical4gpc\src\skyline.cpp
+	"Skyline.h"
+	<GL/freeglut.h>
+	"TextureManager.h"
+
+1420770221 d:\git\projekte\practical4gpc\include\skyline.h
 	<GameObject.h>
 	<GL/freeglut.h>
 
