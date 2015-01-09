@@ -108,7 +108,7 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
-1420761309 source:d:\git\projekte\practical4gpc\maingl.cpp
+1420764907 source:d:\git\projekte\practical4gpc\maingl.cpp
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -123,6 +123,7 @@
 	"SoundManager.h"
 	"World.h"
 	"MainGL.h"
+	"TextureManager.h"
 
 1420761387 d:\git\projekte\practical4gpc\include\game.h
 	"Player.h"
@@ -135,7 +136,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420762609 d:\git\projekte\practical4gpc\include\world.h
+1420764895 d:\git\projekte\practical4gpc\include\world.h
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -159,12 +160,9 @@
 1419786488 source:d:\git\projekte\practical4gpc\src\game.cpp
 	"Game.h"
 
-1419800919 source:d:\git\projekte\practical4gpc\src\player.cpp
+1420762641 source:d:\git\projekte\practical4gpc\src\player.cpp
 	"Player.h"
 	<GL/freeglut.h>
-	<IL/ilut.h>
-	<IL/il.h>
-	<GL/gl.h>
 
 1419801361 source:d:\git\projekte\practical4gpc\src\soundmanager.cpp
 	"SoundManager.h"
@@ -177,20 +175,39 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420762428 source:d:\git\projekte\practical4gpc\src\world.cpp
+1420765634 source:d:\git\projekte\practical4gpc\src\world.cpp
 	"World.h"
 	<cstdio>
 	<cstdlib>
 	<iostream>
 	<math.h>
-	<GL/freeglut.h>
-	<GL/gl.h>
 	"GameObject.h"
+	"Tower.h"
 	"Player.h"
 	"ASEParser.h"
 
-1420762547 source:d:\git\projekte\practical4gpc\src\gameobject.cpp
+1420766115 source:d:\git\projekte\practical4gpc\src\gameobject.cpp
+	"GameObject.h"
+	<GL/freeglut.h>
+
+1420765849 d:\git\projekte\practical4gpc\include\gameobject.h
+
+1420765704 source:d:\git\projekte\practical4gpc\src\tower.cpp
+	"Tower.h"
+	"TextureManager.h"
+
+1420765861 d:\git\projekte\practical4gpc\include\tower.h
+	<GL/freeglut.h>
+	<GL/gl.h>
 	"GameObject.h"
 
-1420761165 d:\git\projekte\practical4gpc\include\gameobject.h
+1420764378 source:d:\git\projekte\practical4gpc\src\texturemanager.cpp
+	"TextureManager.h"
+
+1420764118 d:\git\projekte\practical4gpc\include\texturemanager.h
+	<GL/freeglut.h>
+	<IL/ilut.h>
+	<IL/il.h>
+	<GL/gl.h>
+	<GL/glext.h>
 

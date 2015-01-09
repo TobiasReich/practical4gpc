@@ -7,6 +7,7 @@
 
 
 #include "GameObject.h"     // Drawable GameObject
+#include "Tower.h"          // Drawable GameObject (Tower)
 #include "Player.h"         // Player related class
 #include "ASEParser.h"      // Importer for ASE Files
 
@@ -16,6 +17,7 @@
 using namespace std;
 
 GameObject go;              // Test Object
+Tower tower;
 
 World::World() {
     //ctor
@@ -42,7 +44,7 @@ void World::loadWorld(void){
     // Create  Display Lists
     createImportedObjectDL();   // Imported Object
     createHouseDL();            // create the house DL
-    createTowerDL();            // Tower
+    //createTowerDL();            // Tower
     createMoonDL();             // The Moon
     createGroundPatchDL();      // Ground Patch DL
     createTreeDLs();
@@ -50,6 +52,8 @@ void World::loadWorld(void){
     createLakeDL();             // Creates a DL for the lake
     initTreePositions();
     createSkylineDL();          // Create the DL for the Skyline
+
+    tower.create();
 }
 
 
@@ -256,7 +260,7 @@ void World::createHouseDL(void) {
 }
 
 /** Creates the Display-List for the tower (so we can reuse it several times)**/
-void World::createTowerDL(void){
+/*void World::createTowerDL(void){
 
   // Trunk Object
     GLUquadricObj *flagPole = gluNewQuadric();
@@ -341,6 +345,7 @@ void World::createTowerDL(void){
 
     gluDeleteQuadric(flagPole);
 }
+*/
 
 /** Creates the Display List for the moon**/
 void World::createMoonDL(void){
@@ -712,7 +717,8 @@ void World::drawWorld(void){
     drawFence();            // At the end (after towers & ground) since uses blending!!!
     drawTrees();            // After the fence since the grass is transparent
 
-    go.draw();              // Test for drawing a GO by itself.
+
+
 }
 
 /** Draws the iported AES object (Teapot, Box...)
@@ -738,16 +744,16 @@ void World::drawTowers(){
     // Move the towers 1 "meter" inside the fence so they look better e.g. not 50 but only 49 from center
     glPushMatrix();
         glTranslatef(49, 0, 24);
-        glCallList(towerDL);
+        tower.draw();
 
         glTranslatef(0, 0, -48);
-        glCallList(towerDL);
+        tower.draw();
 
         glTranslatef(-98, 0, 0);
-        glCallList(towerDL);
+        tower.draw();
 
         glTranslatef(0, 0, 48);
-        glCallList(towerDL);
+        tower.draw();
     glPopMatrix();
  }
 

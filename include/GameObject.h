@@ -7,7 +7,8 @@ class GameObject
     public:
         GameObject();
         virtual ~GameObject();
-        void draw(void);
+        virtual void draw(void);
+        virtual void create(void);
     protected:
     private:
 };

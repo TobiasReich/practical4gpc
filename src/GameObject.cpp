@@ -7,19 +7,18 @@ This way the World can call every object to draw itself without caring
 about the details about it's representation **/
 
 #include "GameObject.h"
+#include <GL/freeglut.h>
 
-GameObject::GameObject()
-{
+GameObject::GameObject() {
     //ctor
 }
 
-GameObject::~GameObject()
-{
+GameObject::~GameObject() {
     //dtor
 }
 
+void GameObject::create(void) {
+}
 
-void GameObject::draw()
-{
-    // DRAW ME
+void GameObject::draw(void) {
 }
