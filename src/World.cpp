@@ -10,6 +10,7 @@
 #include "Tower.h"          // Drawable GameObject (Tower)
 #include "House.h"          // Drawable GameObject (House)
 #include "Moon.h"           // Drawable GameObject (Moon)
+#include "Lake.h"           // Drawable GameObject (Lake)
 #include "Player.h"         // Player related class
 #include "ASEParser.h"      // Importer for ASE Files
 
@@ -21,7 +22,7 @@ using namespace std;
 Moon moon;
 Tower tower;
 House house;
-
+Lake lake;
 
 World::World() {
     //ctor
@@ -51,13 +52,13 @@ void World::loadWorld(void){
     createGroundPatchDL();      // Ground Patch DL
     createTreeDLs();
     createStarDL();             // Creates a DL for stars in the sky
-    createLakeDL();             // Creates a DL for the lake
     initTreePositions();
     createSkylineDL();          // Create the DL for the Skyline
 
     tower.create();
     moon.create();
     house.create();
+    lake.create();
 }
 
 
@@ -473,30 +474,7 @@ void World::initTreePositions(){
     }
 }
 
-/** Creates the Display List for the lake**/
-void World::createLakeDL(void){
-    lakeDL = glGenLists(1);
-    glNewList(lakeDL, GL_COMPILE);
 
-        glEnable(GL_TEXTURE_2D);
-        glEnable(GL_BLEND);
-        glBindTexture(GL_TEXTURE_2D, texture_beach);
-        glEnable(GL_NORMALIZE);
-       // glPushMatrix();
-            // Triangle Fan to have a concentric falloff around the lake
-            glBegin(GL_TRIANGLE_FAN);
-                   // Not calculated for this trivial case!
-                  glNormal3f(0, 1, 0); glTexCoord2f(0.5f, 0.5f); glVertex3i(0, -2.5f, 0);   // CENTER (down)
-                   glTexCoord2f(0, 0); glVertex3i(-5, 0, -5);
-                   glTexCoord2f(0, 1); glVertex3i(-5, 0,  5);
-                   glTexCoord2f(1, 1); glVertex3i( 5, 0,  5);
-                   glTexCoord2f(1, 0); glVertex3i( 5, 0, -5);
-                glTexCoord2f(0, 0); glVertex3i(-5, 0, -5);
-            glEnd();
-      //  glPopMatrix();
-        glDisable(GL_NORMALIZE);
-    glEndList();
-}
 
 // --------------------------
 
@@ -522,9 +500,6 @@ void World::drawWorld(void){
 
     drawFence();            // At the end (after towers & ground) since uses blending!!!
     drawTrees();            // After the fence since the grass is transparent
-
-
-
 }
 
 /** Draws the iported AES object (Teapot, Box...)
@@ -542,7 +517,6 @@ void World::drawHouse(void){
     glPushMatrix();
         glTranslatef(housePosition.lat, 0, housePosition.lon);
         house.draw();
-
     glPopMatrix();
 }
 
@@ -682,12 +656,12 @@ void World::drawTrees(){
 void World::drawLake(void){
      glPushMatrix();
         glTranslatef(lakePos.lat, 0, lakePos.lon);
-        glCallList(lakeDL);
+        lake.draw();
 
         // Draw a "rotating water" on top of the hole
            glTranslatef(0, -0.3f, 0); // Water on top (but still a bit below normal level)
            glRotatef(moonRot, 0,1,0);
-            glBindTexture(GL_TEXTURE_2D, texture_water);
+            glBindTexture(GL_TEXTURE_2D, lake.texture_water);
             glBegin(GL_QUADS);
                   glNormal3f(0, 1, 0); glTexCoord2f(0, 0); glVertex3i(-5, 0, -5);   // LB
                   glNormal3f(0, 1, 0); glTexCoord2f(0, 1); glVertex3i(-5, 0,  5);   // LT

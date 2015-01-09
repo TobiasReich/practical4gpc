@@ -36,7 +36,7 @@ class World
 
         GLuint starsDL;                     // The Display-List for the stars
         GLuint groundPatchDL;               // The Display-List for the ground patches
-        GLuint lakeDL;                      // The Display-List for the lake
+
 
         GLuint treeSmallDL;                 // The Display-List for the small trees
         GLuint treeNormalDL;                // The Display-List for the normal trees
@@ -84,8 +84,7 @@ class World
         GLuint texture_grass;               // texture for the ground
         GLuint texture_plant;               // texture for the tree top
 
-        GLuint texture_beach;               // texture for the beach ground
-        GLuint texture_water;               // texture for the water in the beach
+
 
         GLuint texture_skyline;             // texture for the "skyline"
         GLuint texture_clouds;              // texture for the clouds
@@ -98,9 +97,6 @@ class World
         const char * TEXTURE_PLANT_FILENAME     = "Data/gfx/plant.png";
         const char * TEXTURE_TRUNK_FILENAME     = "Data/gfx/trunk.png";
         const char * TEXTURE_GRASS_FILENAME     = "Data/gfx/grass.png";
-
-        const char * TEXTURE_LAKE_WATER          = "Data/gfx/lake_water.png";
-        const char * TEXTURE_BEACH              = "Data/gfx/beach_ground.png";
 
         const char * TEXTURE_PLAYER_FILENAME      = "Data/gfx/player_face.png";
 
