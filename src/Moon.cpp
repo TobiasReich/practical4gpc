@@ -17,7 +17,6 @@ Moon::~Moon()
 void Moon::create(void){
     TextureManager::loadTextureDevil(TEXTURE_MOON_FILENAME, texture_moon, true);
 
-
     moonDL = glGenLists(1);
     glNewList(moonDL , GL_COMPILE);
 
@@ -26,14 +25,12 @@ void Moon::create(void){
         glEnable(GL_BLEND);
         glBindTexture(GL_TEXTURE_2D, texture_moon);
 
-       // glPushMatrix();
-                glBegin(GL_QUADS);
-                    glTexCoord2i(0, 0); glVertex3i(-55, -55, 0);   // LB
-                    glTexCoord2i(0, 1); glVertex3i(-55,  55, 0);   // LT
-                    glTexCoord2i(1, 1); glVertex3i( 55,  55, 0);   // RT
-                    glTexCoord2i(1, 0); glVertex3i( 55, -55, 0);   // RB
-                glEnd();
-       // glPopMatrix();
+        glBegin(GL_QUADS);
+            glTexCoord2i(0, 0); glVertex3i(-55, -55, 0);   // LB
+            glTexCoord2i(0, 1); glVertex3i(-55,  55, 0);   // LT
+            glTexCoord2i(1, 1); glVertex3i( 55,  55, 0);   // RT
+            glTexCoord2i(1, 0); glVertex3i( 55, -55, 0);   // RB
+        glEnd();
 
         glDisable(GL_BLEND);
         glDisable(GL_TEXTURE_2D);

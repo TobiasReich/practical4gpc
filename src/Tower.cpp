@@ -2,14 +2,11 @@
 
 #include "TextureManager.h"
 
-Tower::Tower()
-{
+Tower::Tower() {
     //ctor
-
 }
 
-Tower::~Tower()
-{
+Tower::~Tower() {
     //dtor
 }
 
@@ -17,7 +14,6 @@ Tower::~Tower()
 void Tower::create(void){
     TextureManager::loadTextureDevil(TEXTURE_WALL_FILENAME, texture_wall, false);
     TextureManager::loadTextureDevil(TEXTURE_PANDA_FILENAME, texture_panda, true);
-
 
     // Trunk Object
     GLUquadricObj *flagPole = gluNewQuadric();
