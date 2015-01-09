@@ -128,6 +128,22 @@ ASE-objects and generate openGL displayable values</body>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="70608916-b953-44a9-b113-ac651bfbc9f8" />
           </association>
+          <association Id="b6cad0d4-950c-4f5c-9a69-dce79d373d23" isDerived="false" sourceEndRoleName="main" targetEndRoleName="TextureManager" isLeaf="false" isAbstract="false">
+            <classMoniker Id="42153634-ba1f-4621-a7a3-98fb5756cf3e" LastKnownName="TextureManager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6b6d8df-dcfe-476c-be9c-bbaa306f1756" name="main" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c028102a-7f1a-462c-adcb-8035f4d9c28a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e1bd850-03b7-4a94-a0aa-e529b9935d82" name="TextureManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6119b210-ed35-483a-b29f-996cb0e4e81f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f32f72f-0f4c-4d3c-bf6b-252ec9572667" />
+          </association>
         </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -187,6 +203,22 @@ ASE-objects and generate openGL displayable values</body>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="f7702415-4f2a-415a-bdfa-256620ef39e8" />
           </association>
+          <association Id="f0c5443b-2342-4dc4-94f5-c15ec25e4f89" isDerived="false" sourceEndRoleName="World" targetEndRoleName="TextureManager" isLeaf="false" isAbstract="false">
+            <classMoniker Id="42153634-ba1f-4621-a7a3-98fb5756cf3e" LastKnownName="TextureManager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a573ecc-9d05-4590-8282-79ea82294e86" name="World" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="22e1a28b-888f-4465-821d-2f2cf1ae82db" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ccecbc67-e3bd-4d37-98af-e848a76e0cd8" name="TextureManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="731eaac2-2003-48a1-90a8-4701b6b5ff76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a4dd9ca9-37f1-4689-9024-a59365febed3" />
+          </association>
         </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -199,10 +231,6 @@ ASE-objects and generate openGL displayable values</body>
             <classMoniker Id="1edd6d81-db07-4e16-aba7-30e723556ccc" LastKnownName="Moon" />
             <elementDefinition Id="b230eff1-2529-4188-a7c1-5347fdebe94d" />
           </generalization>
-          <generalization Id="6d8bfac4-372c-4dec-b3fa-675f3bfd481e" isSubstitutable="false">
-            <classMoniker Id="7164476e-ac28-4c40-b868-1971964db85f" LastKnownName="Tree" />
-            <elementDefinition Id="e9d6ae3c-7b59-4251-89a3-7bc09e5bdd9f" />
-          </generalization>
           <generalization Id="b1ab1d8f-c576-4a6d-9253-16679125d2a7" isSubstitutable="false">
             <classMoniker Id="9ec001d2-0403-4027-a1ac-27dd8df639d7" LastKnownName="House" />
             <elementDefinition Id="9743607c-83fe-4ad9-a933-fc4d745d912c" />
@@ -210,6 +238,10 @@ ASE-objects and generate openGL displayable values</body>
           <generalization Id="9bd7b9b9-cb8d-44d2-bd54-afcf718d2207" isSubstitutable="false">
             <classMoniker Id="a2540626-aa22-4e15-9533-eaf69a37d307" LastKnownName="Tower" />
             <elementDefinition Id="b13ca767-5bf9-4a9a-8610-8cf5ead8a42c" />
+          </generalization>
+          <generalization Id="8b2594d7-3489-4a79-885c-f4d52ef7591c" isSubstitutable="false">
+            <classMoniker Id="5a294a10-2b23-425c-8f85-7615ac759407" LastKnownName="Subclasses" />
+            <elementDefinition Id="92064a17-656c-46e2-bee0-6dce42dd37d4" />
           </generalization>
         </generalsInternal>
         <ownedOperationsInternal>
@@ -233,13 +265,28 @@ ASE-objects and generate openGL displayable values</body>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="7164476e-ac28-4c40-b868-1971964db85f" name="Tree" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="0ef64d05-a0bb-4dab-babe-c9f57f4105eb" />
+      <class Id="a2540626-aa22-4e15-9533-eaf69a37d307" name="Tower" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb" />
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="a2540626-aa22-4e15-9533-eaf69a37d307" name="Tower" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb" />
+      <class Id="42153634-ba1f-4621-a7a3-98fb5756cf3e" name="TextureManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="471d0fef-695d-44ad-b77a-644655cf4fcd" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a5012918-78d2-4f5c-a2e6-19ec28f30be2" name="Subclass" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9d658328-63b4-4ec4-bd42-3bff58404a85" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="23c0e8b1-84d3-4638-8885-21ba629cf1cb" name="Subclass4" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9fab791b-c61d-45f5-b458-1642a2b2c13d" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5a294a10-2b23-425c-8f85-7615ac759407" name="Subclasses" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3653199e-5e44-4ccf-b45c-712634bb18f0" />
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>

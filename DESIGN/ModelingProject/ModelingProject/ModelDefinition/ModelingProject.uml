@@ -265,6 +265,45 @@ ASE-objects and generate openGL displayable values</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="1f32f72f-0f4c-4d3c-bf6b-252ec9572667"
+            isDerived="false"
+            sourceEndRoleName="main"
+            targetEndRoleName="TextureManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="471d0fef-695d-44ad-b77a-644655cf4fcd"
+              LastKnownName="TextureManager"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c028102a-7f1a-462c-adcb-8035f4d9c28a"
+                  name="main"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6119b210-ed35-483a-b29f-996cb0e4e81f"
+                  name="TextureManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -386,6 +425,45 @@ ASE-objects and generate openGL displayable values</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="a4dd9ca9-37f1-4689-9024-a59365febed3"
+            isDerived="false"
+            sourceEndRoleName="World"
+            targetEndRoleName="TextureManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="471d0fef-695d-44ad-b77a-644655cf4fcd"
+              LastKnownName="TextureManager"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22e1a28b-888f-4465-821d-2f2cf1ae82db"
+                  name="World"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="731eaac2-2003-48a1-90a8-4701b6b5ff76"
+                  name="TextureManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -428,6 +506,14 @@ ASE-objects and generate openGL displayable values</body>
             <classMoniker
               Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb"
               LastKnownName="Tower"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+          <generalization
+            Id="92064a17-656c-46e2-bee0-6dce42dd37d4"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3653199e-5e44-4ccf-b45c-712634bb18f0"
+              LastKnownName="Subclasses"
               LastKnownLocation="ModelingProject.uml" />
           </generalization>
         </generalsInternal>
@@ -479,6 +565,62 @@ ASE-objects and generate openGL displayable values</body>
       <class
         Id="6e0a95d9-c0e1-4c08-b5d6-e8e1a0aff1cb"
         name="Tower"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="471d0fef-695d-44ad-b77a-644655cf4fcd"
+        name="TextureManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9d658328-63b4-4ec4-bd42-3bff58404a85"
+        name="Subclass"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c05fbdbf-bd2b-4916-bbea-d0973c3e92a8"
+        name="Subclass1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="300cc265-8f25-4f0e-ae18-c67d5dfab903"
+        name="Subclass2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0cf48dc8-0249-401c-af60-2d0efe7baa9d"
+        name="Subclass3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9fab791b-c61d-45f5-b458-1642a2b2c13d"
+        name="Subclass4"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3653199e-5e44-4ccf-b45c-712634bb18f0"
+        name="Subclasses"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
