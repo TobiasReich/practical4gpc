@@ -34,8 +34,6 @@ class World
         // Display-Lists for faster rendering
         GLuint importObjectDL;              // The Display-List for the imported object
         GLuint houseDL;                     // The Display-List for the house patches
-       // GLuint towerDL;                     // The Display-List for the towers
-        GLuint moonDL;                      // The Display-List for the moon
         GLuint starsDL;                     // The Display-List for the stars
         GLuint groundPatchDL;               // The Display-List for the ground patches
         GLuint lakeDL;                      // The Display-List for the lake
@@ -81,14 +79,12 @@ class World
         GLuint texture_house_window;        // texture for the house wall with window
         GLuint texture_house_door;          // texture for the house wall with door
         GLuint texture_house_roof;          // texture for the house roof
-        //GLuint texture_wall;                // texture for the ground
         GLuint texture_trunk;               // texture for the trunk // Flag pole on tower
-        GLuint texture_moon;                // texture for the moon in the sky
+
         GLuint texture_ground;              // texture for the ground
         GLuint texture_fence;               // texture for the fence
         GLuint texture_grass;               // texture for the ground
         GLuint texture_plant;               // texture for the tree top
-       // GLuint texture_panda;               // texture for the tree top
 
         GLuint texture_beach;               // texture for the beach ground
         GLuint texture_water;               // texture for the water in the beach
@@ -107,7 +103,7 @@ class World
         const char * TEXTURE_HOUSE_WINDOW_FILENAME  = "Data/gfx/house_window.png";
         const char * TEXTURE_HOUSE_DOOR_FILENAME = "Data/gfx/house_door.png";
         const char * TEXTURE_HOUSE_ROOF_FILENAME = "Data/gfx/house_roof.png";
-        const char * TEXTURE_MOON_FILENAME       = "Data/gfx/moon.png";
+
 
 
         const char * TEXTURE_LAKE_WATER          = "Data/gfx/lake_water.png";

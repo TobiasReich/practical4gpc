@@ -548,7 +548,6 @@ void initTextures(void){
     TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_WINDOW_FILENAME, world.texture_house_window, false);
     TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_DOOR_FILENAME, world.texture_house_door, false);
     TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_ROOF_FILENAME, world.texture_house_roof, false);
-    TextureManager::loadTextureDevil(world.TEXTURE_MOON_FILENAME, world.texture_moon, true);
 
 
     TextureManager::loadTextureDevil(world.TEXTURE_LAKE_WATER, world.texture_water, true);

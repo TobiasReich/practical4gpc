@@ -108,7 +108,7 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
-1420764907 source:d:\git\projekte\practical4gpc\maingl.cpp
+1420766611 source:d:\git\projekte\practical4gpc\maingl.cpp
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -136,7 +136,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420764895 d:\git\projekte\practical4gpc\include\world.h
+1420766595 d:\git\projekte\practical4gpc\include\world.h
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -196,9 +196,8 @@
 	"Tower.h"
 	"TextureManager.h"
 
-1420765861 d:\git\projekte\practical4gpc\include\tower.h
+1420766752 d:\git\projekte\practical4gpc\include\tower.h
 	<GL/freeglut.h>
-	<GL/gl.h>
 	"GameObject.h"
 
 1420764378 source:d:\git\projekte\practical4gpc\src\texturemanager.cpp
@@ -210,4 +209,14 @@
 	<IL/il.h>
 	<GL/gl.h>
 	<GL/glext.h>
+
+1420766692 source:d:\git\projekte\practical4gpc\src\moon.cpp
+	"Moon.h"
+	<GL/freeglut.h>
+	<GL/gl.h>
+
+1420766711 d:\git\projekte\practical4gpc\include\moon.h
+	<GameObject.h>
+	"TextureManager.h"
+	<GL/gl.h>
 
