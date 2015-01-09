@@ -545,10 +545,6 @@ void initTextures(void){
     TextureManager::loadTextureDevil(world.TEXTURE_PLANT_FILENAME, world.texture_plant, false);
     TextureManager::loadTextureDevil(world.TEXTURE_GRASS_FILENAME, world.texture_grass, true);
     TextureManager::loadTextureDevil(world.TEXTURE_TRUNK_FILENAME, world.texture_trunk, false);
-    TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_WINDOW_FILENAME, world.texture_house_window, false);
-    TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_DOOR_FILENAME, world.texture_house_door, false);
-    TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_ROOF_FILENAME, world.texture_house_roof, false);
-
 
     TextureManager::loadTextureDevil(world.TEXTURE_LAKE_WATER, world.texture_water, true);
     TextureManager::loadTextureDevil(world.TEXTURE_BEACH, world.texture_beach, false);

@@ -108,7 +108,7 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
-1420766611 source:d:\git\projekte\practical4gpc\maingl.cpp
+1420768960 source:d:\git\projekte\practical4gpc\maingl.cpp
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -136,7 +136,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
-1420766595 d:\git\projekte\practical4gpc\include\world.h
+1420769007 d:\git\projekte\practical4gpc\include\world.h
 	<cstdio>
 	<cstdlib>
 	<iostream>

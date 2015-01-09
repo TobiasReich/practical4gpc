@@ -8,7 +8,8 @@
 
 #include "GameObject.h"     // Drawable GameObject
 #include "Tower.h"          // Drawable GameObject (Tower)
-#include "Moon.h"          // Drawable GameObject (Tower)
+#include "House.h"          // Drawable GameObject (House)
+#include "Moon.h"           // Drawable GameObject (Moon)
 #include "Player.h"         // Player related class
 #include "ASEParser.h"      // Importer for ASE Files
 
@@ -19,6 +20,8 @@ using namespace std;
 
 Moon moon;
 Tower tower;
+House house;
+
 
 World::World() {
     //ctor
@@ -44,7 +47,6 @@ void World::loadWorld(void){
 
     // Create  Display Lists
     createImportedObjectDL();   // Imported Object
-    createHouseDL();            // create the house DL
 
     createGroundPatchDL();      // Ground Patch DL
     createTreeDLs();
@@ -55,6 +57,7 @@ void World::loadWorld(void){
 
     tower.create();
     moon.create();
+    house.create();
 }
 
 
@@ -171,89 +174,6 @@ void World::createImportedObjectDL(){
 
         // Reset the original diffuse material value
         resetGLColor();
-    glEndList();
-}
-
-
-/** Creates the house **/
-void World::createHouseDL(void) {
-    houseDL = glGenLists(1);
-    glNewList(houseDL, GL_COMPILE);
-
-    glEnable(GL_TEXTURE_2D);
-    glBindTexture(GL_TEXTURE_2D, texture_house_window);
-
-       // glPushMatrix();
-
-                // Windows
-                glBegin(GL_QUADS);
-                    glNormal3f(0, 0, 1);      // Not calculated for this trivial case!
-                    glTexCoord2i(0, 0); glVertex3i(-2, 0, 2);   // LB
-                    glTexCoord2i(0, 1); glVertex3i(-2, 3, 2);   // LT
-                    glTexCoord2i(1, 1); glVertex3i( 2, 3, 2);   // RT
-                    glTexCoord2i(1, 0); glVertex3i( 2, 0, 2);   // RB
-                glEnd();
-                glBegin(GL_QUADS);
-                    glNormal3f(0, 0, -1);      // Not calculated for this trivial case!
-                    glTexCoord2i(0, 0); glVertex3i(-2, 0, -2);   // LB
-                    glTexCoord2i(0, 1); glVertex3i(-2, 3, -2);   // LT
-                    glTexCoord2i(1, 1); glVertex3i( 2, 3, -2);   // RT
-                    glTexCoord2i(1, 0); glVertex3i( 2, 0, -2);   // RB
-                glEnd();
-                glBegin(GL_QUADS);
-                    glNormal3f(-1, 0, 0);      // Not calculated for this trivial case!
-                    glTexCoord2i(0, 0); glVertex3i(-2, 0, -2);   // LB
-                    glTexCoord2i(0, 1); glVertex3i(-2, 3, -2);   // LT
-                    glTexCoord2i(1, 1); glVertex3i(-2, 3,  2);   // RT
-                    glTexCoord2i(1, 0); glVertex3i(-2, 0,  2);   // RB
-                glEnd();
-
-                glBindTexture(GL_TEXTURE_2D, texture_house_door);
-
-                // Door
-                glBegin(GL_QUADS);
-                    glNormal3f(1, 0, 0);      // Not calculated for this trivial case!
-                    glTexCoord2i(0, 0); glVertex3i( 2, 0, -2);   // LB
-                    glTexCoord2i(0, 1); glVertex3i( 2, 3, -2);   // LT
-                    glTexCoord2i(1, 1); glVertex3i( 2, 3,  2);   // RT
-                    glTexCoord2i(1, 0); glVertex3i( 2, 0,  2);   // RB
-                glEnd();
-
-                // Roof Stuff
-                glBindTexture(GL_TEXTURE_2D, texture_house_roof);
-                // Roof
-                glBegin(GL_QUADS);
-                    glNormal3f(0.707, 0.707, 0);      // Normal at 45°
-                    glTexCoord2i(0, 0); glVertex3i( 2, 3, -2);   // LB
-                    glTexCoord2i(0, 1); glVertex3i( 0, 5, -2);   // LT
-                    glTexCoord2i(1, 1); glVertex3i( 0, 5,  2);   // RT
-                    glTexCoord2i(1, 0); glVertex3i( 2, 3,  2);   // RB
-                glEnd();
-                glBegin(GL_QUADS);
-                    glNormal3f(-0.707, 0.707, 0);      // Normal at 45°
-                    glTexCoord2i(0, 0); glVertex3i( -2, 3, -2);   // LB
-                    glTexCoord2i(0, 1); glVertex3i( 0,  5, -2);   // LT
-                    glTexCoord2i(1, 1); glVertex3i( 0,  5,  2);   // RT
-                    glTexCoord2i(1, 0); glVertex3i( -2, 3,  2);   // RB
-                glEnd();
-
-                // Roof triangles Front / Back
-                glBindTexture(GL_TEXTURE_2D, texture_house_window);
-                glBegin(GL_TRIANGLES);
-                    glNormal3f(0, 0, -1);      // Normal is trivial
-                    glTexCoord2f(0, 0); glVertex3i( -2, 3, -2);     // LB
-                    glTexCoord2f(0.5, 0.4); glVertex3i( 0,  5, -2); // CT
-                    glTexCoord2f(1, 0); glVertex3i( 2,  3, -2);     // RB
-                glEnd();
-                glBegin(GL_TRIANGLES);
-                    glNormal3f(0, 0, 1);    // Normal is trivial
-                    glTexCoord2f(0, 0);     glVertex3i( -2, 3, 2);  // LB
-                    glTexCoord2f(0.5, 0.4); glVertex3i( 0,  5, 2);  // CT
-                    glTexCoord2f(1, 0);     glVertex3i( 2,  3, 2);  // RB
-                glEnd();
-            glDisable(GL_TEXTURE_2D);
-       // glPopMatrix();
-
     glEndList();
 }
 
@@ -621,7 +541,8 @@ void World::drawImportedObject(void){
 void World::drawHouse(void){
     glPushMatrix();
         glTranslatef(housePosition.lat, 0, housePosition.lon);
-        glCallList(houseDL);
+        house.draw();
+
     glPopMatrix();
 }
 

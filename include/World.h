@@ -33,7 +33,7 @@ class World
 
         // Display-Lists for faster rendering
         GLuint importObjectDL;              // The Display-List for the imported object
-        GLuint houseDL;                     // The Display-List for the house patches
+
         GLuint starsDL;                     // The Display-List for the stars
         GLuint groundPatchDL;               // The Display-List for the ground patches
         GLuint lakeDL;                      // The Display-List for the lake
@@ -76,9 +76,7 @@ class World
         bool moonLight = true;            // scene light on
 
         // Textures
-        GLuint texture_house_window;        // texture for the house wall with window
-        GLuint texture_house_door;          // texture for the house wall with door
-        GLuint texture_house_roof;          // texture for the house roof
+
         GLuint texture_trunk;               // texture for the trunk // Flag pole on tower
 
         GLuint texture_ground;              // texture for the ground
@@ -100,11 +98,6 @@ class World
         const char * TEXTURE_PLANT_FILENAME     = "Data/gfx/plant.png";
         const char * TEXTURE_TRUNK_FILENAME     = "Data/gfx/trunk.png";
         const char * TEXTURE_GRASS_FILENAME     = "Data/gfx/grass.png";
-        const char * TEXTURE_HOUSE_WINDOW_FILENAME  = "Data/gfx/house_window.png";
-        const char * TEXTURE_HOUSE_DOOR_FILENAME = "Data/gfx/house_door.png";
-        const char * TEXTURE_HOUSE_ROOF_FILENAME = "Data/gfx/house_roof.png";
-
-
 
         const char * TEXTURE_LAKE_WATER          = "Data/gfx/lake_water.png";
         const char * TEXTURE_BEACH              = "Data/gfx/beach_ground.png";
