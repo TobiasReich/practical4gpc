@@ -23,6 +23,7 @@
 #include "SoundManager.h"   // Class responsible for sound & music
 #include "World.h"          // World Class
 #include "MainGL.h"         // Header for MainGL with used methods
+#include "TextureManager.h"
 
 // ------- DEFINITIONS -------
 
@@ -521,7 +522,7 @@ void LoadTexture(const char * filename, GLuint &texture) {
 }
 
 /** Since the DevIL does all the work for us, this is the new LoadTexture methode **/
-void loadTextureDevil(const char * filename, GLuint &texture, bool clamp) {
+/*void loadTextureDevil(const char * filename, GLuint &texture, bool clamp) {
     // const_cast here for assigning a const char* (string) to a method that
     // requieres a char*
     // Since we won't modify the char* this is safe here
@@ -534,45 +535,45 @@ void loadTextureDevil(const char * filename, GLuint &texture, bool clamp) {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
     }
 }
-
+*/
 /**  Initializes the textures and sets their ID's **/
 void initTextures(void){
     // World textures
-    loadTextureDevil(world.TEXTURE_GROUND_FILENAME, world.texture_ground, false);
-    loadTextureDevil(world.TEXTURE_WALL_FILENAME, world.texture_wall, false);
-    loadTextureDevil(world.TEXTURE_FENCE_FILENAME, world.texture_fence, true);
-    loadTextureDevil(world.TEXTURE_PLANT_FILENAME, world.texture_plant, false);
-    loadTextureDevil(world.TEXTURE_GRASS_FILENAME, world.texture_grass, true);
-    loadTextureDevil(world.TEXTURE_TRUNK_FILENAME, world.texture_trunk, false);
-    loadTextureDevil(world.TEXTURE_HOUSE_WINDOW_FILENAME, world.texture_house_window, false);
-    loadTextureDevil(world.TEXTURE_HOUSE_DOOR_FILENAME, world.texture_house_door, false);
-    loadTextureDevil(world.TEXTURE_HOUSE_ROOF_FILENAME, world.texture_house_roof, false);
-    loadTextureDevil(world.TEXTURE_MOON_FILENAME, world.texture_moon, true);
-    loadTextureDevil(world.TEXTURE_PANDA_FILENAME, world.texture_panda, true);
+    TextureManager::loadTextureDevil(world.TEXTURE_GROUND_FILENAME, world.texture_ground, false);
 
-    loadTextureDevil(world.TEXTURE_LAKE_WATER, world.texture_water, true);
-    loadTextureDevil(world.TEXTURE_BEACH, world.texture_beach, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_FENCE_FILENAME, world.texture_fence, true);
+    TextureManager::loadTextureDevil(world.TEXTURE_PLANT_FILENAME, world.texture_plant, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_GRASS_FILENAME, world.texture_grass, true);
+    TextureManager::loadTextureDevil(world.TEXTURE_TRUNK_FILENAME, world.texture_trunk, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_WINDOW_FILENAME, world.texture_house_window, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_DOOR_FILENAME, world.texture_house_door, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_HOUSE_ROOF_FILENAME, world.texture_house_roof, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_MOON_FILENAME, world.texture_moon, true);
 
 
-    loadTextureDevil(world.TEXTURE_SKYLINE_FILENAME, world.texture_skyline, true);
-    loadTextureDevil(world.TEXTURE_CLOUDS_FILENAME, world.texture_clouds, false);
+    TextureManager::loadTextureDevil(world.TEXTURE_LAKE_WATER, world.texture_water, true);
+    TextureManager::loadTextureDevil(world.TEXTURE_BEACH, world.texture_beach, false);
+
+
+    TextureManager::loadTextureDevil(world.TEXTURE_SKYLINE_FILENAME, world.texture_skyline, true);
+    TextureManager::loadTextureDevil(world.TEXTURE_CLOUDS_FILENAME, world.texture_clouds, false);
 
 
     // HUD textures
-    loadTextureDevil(TEXTURE_COMPASS_NEEDLE_FILENAME, texture_minimap_compass, true);
-    loadTextureDevil(TEXTURE_COMPASS_FILENAME, texture_compass_background, true);
-    loadTextureDevil(TEXTURE_PLAYER_SYMBOL_FILENAME, texture_minimap_player, true);
-    loadTextureDevil(TEXTURE_TREE_MMAP_FILENAME, texture_minimap_tree, true);
-    loadTextureDevil(TEXTURE_MINIMAP_BG_FILENAME, texture_minimap_background, true);
-    loadTextureDevil(TEXTURE_MINIMAP_LIGHT, texture_minimap_light, true);
-    loadTextureDevil(TEXTURE_MINIMAP_MOON_LIGHT, texture_minimap_moon_light, true);
-    loadTextureDevil(TEXTURE_COMPASS_BG_FILENAME, texture_compass_phys_background, true);
-    loadTextureDevil(TEXTURE_LAKE_MMAP_FILENAME, texture_minimap_lake, true);
-    loadTextureDevil(TEXTURE_FOUNTAIN_MMAP_FILENAME, texture_minimap_fountain, true);
+    TextureManager::loadTextureDevil(TEXTURE_COMPASS_NEEDLE_FILENAME, texture_minimap_compass, true);
+    TextureManager::loadTextureDevil(TEXTURE_COMPASS_FILENAME, texture_compass_background, true);
+    TextureManager::loadTextureDevil(TEXTURE_PLAYER_SYMBOL_FILENAME, texture_minimap_player, true);
+    TextureManager::loadTextureDevil(TEXTURE_TREE_MMAP_FILENAME, texture_minimap_tree, true);
+    TextureManager::loadTextureDevil(TEXTURE_MINIMAP_BG_FILENAME, texture_minimap_background, true);
+    TextureManager::loadTextureDevil(TEXTURE_MINIMAP_LIGHT, texture_minimap_light, true);
+    TextureManager::loadTextureDevil(TEXTURE_MINIMAP_MOON_LIGHT, texture_minimap_moon_light, true);
+    TextureManager::loadTextureDevil(TEXTURE_COMPASS_BG_FILENAME, texture_compass_phys_background, true);
+    TextureManager::loadTextureDevil(TEXTURE_LAKE_MMAP_FILENAME, texture_minimap_lake, true);
+    TextureManager::loadTextureDevil(TEXTURE_FOUNTAIN_MMAP_FILENAME, texture_minimap_fountain, true);
 
-    loadTextureDevil(TEXTURE_REC, texture_rec, true);
+    TextureManager::loadTextureDevil(TEXTURE_REC, texture_rec, true);
 
-    loadTextureDevil(world.TEXTURE_PLAYER_FILENAME, world.texture_player_character, true);
+    TextureManager::loadTextureDevil(world.TEXTURE_PLAYER_FILENAME, world.texture_player_character, true);
 
 
     /*  // This is the self impleented code for loading textures.
