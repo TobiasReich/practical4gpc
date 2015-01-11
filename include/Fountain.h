@@ -20,8 +20,8 @@ class Fountain : public GameObject
 {
     public:
         // Imported Object (3Ds - ASE import)
-        //const string filename = "Data/objects/fuente.ase";
-        const string filename = "Data/objects/objeto.ase";
+        const string filename = "Data/objects/fuente.ase";
+        //const string filename = "Data/objects/objeto.ase";
 
         std::vector<ASEParser::Vertex> vertices;
         std::vector<ASEParser::Normal> normals;

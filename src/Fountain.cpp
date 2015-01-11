@@ -20,10 +20,10 @@ void Fountain::create(void){
 
         // These objects appear far to bright. This reduces the diffuse color greatly
         glColorMaterial(GL_FRONT, GL_DIFFUSE);
-        glColor3f(0.02f, 0.02, 0.02f);
+        glColor3f(0.01f, 0.01f, 0.01f);
 
         glPushMatrix();
-            glScalef(0.002, 0.002, 0.002);    // These objetcs are huge!
+            glScalef(0.0015, 0.0015, 0.0015);    // These objetcs are huge!
 
             // Rotate since axis are different
             // X / Y like screen cordinates for better understanding

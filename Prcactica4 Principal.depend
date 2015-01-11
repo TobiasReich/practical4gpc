@@ -108,7 +108,7 @@
 1419786488 source:d:\workspacec++\practica4 principal\src\game.cpp
 	"Game.h"
 
-1420996001 source:d:\git\projekte\practical4gpc\maingl.cpp
+1421008421 source:d:\git\projekte\practical4gpc\maingl.cpp
 	<cstdio>
 	<cstdlib>
 	<iostream>
@@ -164,14 +164,8 @@
 	"Player.h"
 	<GL/freeglut.h>
 
-1419801361 source:d:\git\projekte\practical4gpc\src\soundmanager.cpp
+1421005753 source:d:\git\projekte\practical4gpc\src\soundmanager.cpp
 	"SoundManager.h"
-	<cstdio>
-	<cstdlib>
-	<iostream>
-	<math.h>
-	<IL/ilut.h>
-	<IL/il.h>
 	<SDL/SDL.h>
 	<SDL/SDL_mixer.h>
 
@@ -281,7 +275,7 @@
 	"Fountain.h"
 	"World.h"
 
-1420999563 d:\git\projekte\practical4gpc\include\fountain.h
+1421008440 d:\git\projekte\practical4gpc\include\fountain.h
 	<vector>
 	<cstdio>
 	<cstdlib>

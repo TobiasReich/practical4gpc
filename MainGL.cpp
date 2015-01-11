@@ -33,7 +33,6 @@
 
 using namespace std;
 
-
 void init(void){
     glClearColor(0.1, 0.1, 0.2f, 0.0f);
     glEnable(GL_DEPTH_TEST);
