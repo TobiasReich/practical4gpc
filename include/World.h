@@ -5,11 +5,11 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
+#include <vector>
 
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 
-#include "ASEParser.h"     // Importer for ASE Files
 
 using namespace std;
 
@@ -21,23 +21,13 @@ class World
             float lat, lon;
         };
 
-        // Imported Object (3Ds - ASE import)
-        //const string filename = "Data/objects/fuente.ase";
-        const string filename = "Data/objects/objeto.ase";
-
-        std::vector<ASEParser::Vertex> vertices;
-        std::vector<ASEParser::Normal> normals;
-        std::vector<ASEParser::Face> faces;
-
-        // Display-Lists for faster rendering
-        GLuint importObjectDL;              // The Display-List for the imported object
 
         std::vector<World::Position2D> treeSmallPositions;
         std::vector<World::Position2D> treeNormalPositions;
         std::vector<World::Position2D> treeBigPositions;
 
         Position2D lakePos = {10, 10};// Position of the lake
-        Position2D fountainPos = {15, -10};// Position of the fountain (imported Object)
+        Position2D fountainPos = {25, -10};// Position of the fountain (imported Object)
 
         float moonRot = 0;                  // Rotation of the moon (in degrees)
 
@@ -80,11 +70,11 @@ class World
     protected:
     private:
         // OBJECT GENERATION and World drawing
-        void createImportedObjectDL(void);
+       // void createImportedObjectDL(void);
         void initTreePositions(void);
 
         void drawStars(void);
-        void drawImportedObject(void);
+        void drawFountain(void);
         void drawHouse(void);
         void drawTowers(void);
         void drawMoon(void);
