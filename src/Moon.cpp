@@ -26,10 +26,10 @@ void Moon::create(void){
         glBindTexture(GL_TEXTURE_2D, texture_moon);
 
         glBegin(GL_QUADS);
-            glTexCoord2i(0, 0); glVertex3i(-55, -55, 0);   // LB
-            glTexCoord2i(0, 1); glVertex3i(-55,  55, 0);   // LT
-            glTexCoord2i(1, 1); glVertex3i( 55,  55, 0);   // RT
-            glTexCoord2i(1, 0); glVertex3i( 55, -55, 0);   // RB
+            glTexCoord2i(0, 0); glVertex3i(-65, -65, 0);   // LB
+            glTexCoord2i(0, 1); glVertex3i(-65,  65, 0);   // LT
+            glTexCoord2i(1, 1); glVertex3i( 65,  65, 0);   // RT
+            glTexCoord2i(1, 0); glVertex3i( 65, -65, 0);   // RB
         glEnd();
 
         glDisable(GL_BLEND);
