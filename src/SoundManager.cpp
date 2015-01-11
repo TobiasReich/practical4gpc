@@ -1,12 +1,7 @@
 #include "SoundManager.h"
 
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
-#include <math.h>
 
-#include <IL/ilut.h>
-#include <IL/il.h>
+
 #include <SDL/SDL.h>
 #include <SDL/SDL_mixer.h>
 
@@ -21,7 +16,7 @@ SoundManager::~SoundManager() {
 
 /** Inititalizes the Sound Manager, loads all Sounds etc. **/
 void SoundManager::init(){
-    cout << " Init Sound Manager " << endl;
+    //cout << " Init Sound Manager " << endl;
 
 
     initSound();
