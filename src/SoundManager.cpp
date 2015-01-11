@@ -6,19 +6,12 @@
 #include <SDL/SDL_mixer.h>
 
 
-SoundManager::SoundManager() {
-    //ctor
-}
+SoundManager::SoundManager() {}
 
-SoundManager::~SoundManager() {
-    //dtor
-}
+SoundManager::~SoundManager() {}
 
 /** Inititalizes the Sound Manager, loads all Sounds etc. **/
 void SoundManager::init(){
-    //cout << " Init Sound Manager " << endl;
-
-
     initSound();
 }
 
