@@ -521,31 +521,11 @@ void LoadTexture(const char * filename, GLuint &texture) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
-/** Since the DevIL does all the work for us, this is the new LoadTexture methode **/
-/*void loadTextureDevil(const char * filename, GLuint &texture, bool clamp) {
-    // const_cast here for assigning a const char* (string) to a method that
-    // requieres a char*
-    // Since we won't modify the char* this is safe here
-    texture = ilutGLLoadImage(const_cast<char*> (filename));
 
-    if (clamp){
-        glBindTexture(GL_TEXTURE_2D, texture);
-        // Only needs to be clamped in "height" since textures repeat in width (fence, grass...)
-        //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-    }
-}
-*/
 /**  Initializes the textures and sets their ID's **/
 void initTextures(void){
     // World textures
-
-
     TextureManager::loadTextureDevil(world.TEXTURE_FENCE_FILENAME, world.texture_fence, true);
-    TextureManager::loadTextureDevil(world.TEXTURE_PLANT_FILENAME, world.texture_plant, false);
-    TextureManager::loadTextureDevil(world.TEXTURE_GRASS_FILENAME, world.texture_grass, true);
-    TextureManager::loadTextureDevil(world.TEXTURE_TRUNK_FILENAME, world.texture_trunk, false);
-
 
     // HUD textures
     TextureManager::loadTextureDevil(TEXTURE_COMPASS_NEEDLE_FILENAME, texture_minimap_compass, true);
@@ -560,7 +540,6 @@ void initTextures(void){
     TextureManager::loadTextureDevil(TEXTURE_FOUNTAIN_MMAP_FILENAME, texture_minimap_fountain, true);
 
     TextureManager::loadTextureDevil(TEXTURE_REC, texture_rec, true);
-
     TextureManager::loadTextureDevil(world.TEXTURE_PLAYER_FILENAME, world.texture_player_character, true);
 
 

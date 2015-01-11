@@ -16,7 +16,6 @@ using namespace std;
 class World
 {
     public:
-        // Fields #############################################
         /** Struct for defining a position on the level (2D) **/
         struct Position2D{
             float lat, lon;
@@ -25,7 +24,6 @@ class World
         // Imported Object (3Ds - ASE import)
         //const string filename = "Data/objects/fuente.ase";
         const string filename = "Data/objects/objeto.ase";
-        //const string filename = "Data/objects/caja.ase";
 
         std::vector<ASEParser::Vertex> vertices;
         std::vector<ASEParser::Normal> normals;
@@ -33,10 +31,6 @@ class World
 
         // Display-Lists for faster rendering
         GLuint importObjectDL;              // The Display-List for the imported object
-
-        GLuint treeSmallDL;                 // The Display-List for the small trees
-        GLuint treeNormalDL;                // The Display-List for the normal trees
-        GLuint treeBigDL;                   // The Display-List for the big trees
 
         std::vector<World::Position2D> treeSmallPositions;
         std::vector<World::Position2D> treeNormalPositions;
@@ -65,22 +59,11 @@ class World
         // LIGHTs
         bool moonLight = true;            // scene light on
 
-        // Textures
-        GLuint texture_trunk;               // texture for the trunk // Flag pole on tower
-
         GLuint texture_fence;               // texture for the fence
-        GLuint texture_grass;               // texture for the ground
-        GLuint texture_plant;               // texture for the tree top
-
         GLuint texture_player_character;     // texture for the background of the minimap
 
         const char * TEXTURE_FENCE_FILENAME     = "Data/gfx/fence.png";
-        const char * TEXTURE_PLANT_FILENAME     = "Data/gfx/plant.png";
-        const char * TEXTURE_TRUNK_FILENAME     = "Data/gfx/trunk.png";
-        const char * TEXTURE_GRASS_FILENAME     = "Data/gfx/grass.png";
-
         const char * TEXTURE_PLAYER_FILENAME      = "Data/gfx/player_face.png";
-
 
         const float FogColor[3]={0.2f,0.3f,0.5f}; // Define a nice light grey
 
@@ -98,7 +81,6 @@ class World
     private:
         // OBJECT GENERATION and World drawing
         void createImportedObjectDL(void);
-        void createTreeDLs(void);
         void initTreePositions(void);
 
         void drawStars(void);
