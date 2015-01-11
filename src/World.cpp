@@ -66,7 +66,7 @@ void World::loadWorld(void){
 
 /** Initializes the tree positions **/
 void World::initTreePositions(){
-    for (int i=0; i< 15; ++i){
+    for (int i=0; i< 20; ++i){
         Position2D pos = {(rand() % 80)-40, (rand() % 40) - 20};
         treeSmallPositions.push_back(pos);
     }
@@ -74,7 +74,7 @@ void World::initTreePositions(){
         Position2D pos = {(rand() % 80)-40, (rand() % 40) - 20};
         treeNormalPositions.push_back(pos);
     }
-    for (int i=0; i< 5; ++i){
+    for (int i=0; i< 8; ++i){
         Position2D pos = {(rand() % 80)-40, (rand() % 40) - 20};
         treeBigPositions.push_back(pos);
     }
