@@ -7,11 +7,14 @@
 
 
 #include "GameObject.h"     // Drawable GameObject
+#include "GroundPatch.h"    // Drawable GameObject (Ground)
+#include "StarField.h"      // Drawable GameObject (Stars)
 #include "Tower.h"          // Drawable GameObject (Tower)
 #include "House.h"          // Drawable GameObject (House)
 #include "Moon.h"           // Drawable GameObject (Moon)
 #include "Skyline.h"        // Drawable GameObject (Skyline)
 #include "Lake.h"           // Drawable GameObject (Lake)
+
 #include "Player.h"         // Player related class
 #include "ASEParser.h"      // Importer for ASE Files
 
@@ -25,24 +28,20 @@ Tower tower;
 House house;
 Lake lake;
 Skyline skyline;
+GroundPatch groundPatch;
+StarField starField;
 
-World::World() {
-    //ctor
-}
+World::World() {}
 
-World::~World() {
-    //dtor
-}
+World::~World() {}
 
 void World::loadWorld(void){
     // Fog for better atmosphere
-    // @TODO Put that in a function to switch it on/off
     glEnable(GL_FOG);
     glFogfv(GL_FOG_COLOR, FogColor);    // set the fog color
     glFogi(GL_FOG_MODE, GL_LINEAR);
     glFogf(GL_FOG_START, 15.f);
     glFogf(GL_FOG_END, 450.f);
-
 
     // Create Parser Object and parse the "filename"
     ASEParser parser(filename);
@@ -51,9 +50,7 @@ void World::loadWorld(void){
     // Create  Display Lists
     createImportedObjectDL();   // Imported Object
 
-    createGroundPatchDL();      // Ground Patch DL
     createTreeDLs();
-    createStarDL();             // Creates a DL for stars in the sky
     initTreePositions();
 
     tower.create();
@@ -61,71 +58,8 @@ void World::loadWorld(void){
     house.create();
     lake.create();
     skyline.create();
-}
-
-
-/** Creates a display-list for the 2x2 ground patch **/
-void World::createGroundPatchDL(){
-    groundPatchDL = glGenLists(1);
-    glNewList(groundPatchDL, GL_COMPILE);
-
-        glEnable(GL_TEXTURE_2D);
-        glBindTexture(GL_TEXTURE_2D, texture_ground);
-
-        // Draw more than one quad to evate that lousy per vertex shading
-        glBegin(GL_QUADS);
-               // Not calculated for this trivial case!
-              glNormal3f(0, 1, 0); glTexCoord2i(0, 0); glVertex3i(-1, 0, -1);   // LB
-              glNormal3f(0, 1, 0); glTexCoord2i(0, 1); glVertex3i(-1, 0,  1);   // LT
-              glNormal3f(0, 1, 0); glTexCoord2i(1, 1); glVertex3i( 1, 0,  1);   // RT
-              glNormal3f(0, 1, 0); glTexCoord2i(1, 0); glVertex3i( 1, 0, -1);   // RB
-        glEnd();
-
-    glEndList();
-}
-
-
-/** Creates a display-list for stars **/
-void World::createStarDL(){
-    starsDL = glGenLists(1);
-    glNewList(starsDL, GL_COMPILE);
-
-        glDisable(GL_LIGHTING);
-        glDisable(GL_BLEND);
-
-        // Draw more than one quad to evate that lousy per vertex shading
-        //glPushMatrix();
-
-            // Smallest / farthest stars
-            glPointSize(1);
-            glColor3f(0.6f, 0.8f, 1);
-            glBegin(GL_POINTS);
-                for (int i=0; i< 150; ++i){
-                    glVertex3f((rand() % 1000)-500, 200, (rand() % 1000)-500);
-                }
-            glEnd();
-
-            // mid range stars
-            glColor3f(1, 1, 1);
-            glPointSize(2);
-            glBegin(GL_POINTS);
-                for (int i=0; i< 50; ++i){
-                    glVertex3f((rand() % 1000)-500, 150, (rand() % 1000)-500);
-                }
-            glEnd();
-
-            // big / near stars
-            resetGLColor();
-            glPointSize(3);
-            glBegin(GL_POINTS);
-                for (int i=0; i< 25; ++i){
-                    glVertex3f((rand() % 1000)-500, 90, (rand() % 1000)-500);
-                }
-            glEnd();
-        //glPopMatrix();
-
-        glEnable(GL_LIGHTING);
-    glEndList();
+    groundPatch.create();
+    starField.create();
 }
 
 /** This creates the GL-Display-List in order to render the imported Object.
@@ -470,7 +404,8 @@ of the moon (unlike the clouds) - just slower **/
 void World::drawStars(void){
     glPushMatrix();
         glRotatef(moonRot * 0.1, 0, 1, 0);
-        glCallList(starsDL);
+        starField.draw();
+        //glCallList(starsDL);
     glPopMatrix();
 }
 
@@ -488,7 +423,8 @@ void World::drawGround(void){
                             && (j == 52 || j == 53 || j == 54 || j == 55 || j == 56 )){
                             // Do nothing -> leaves empty space
                         } else {
-                            glCallList(groundPatchDL); //draws the ground patch
+                            groundPatch.draw();
+                            //glCallList(groundPatchDL); //draws the ground patch
                         }
                 }
             glPopMatrix();

@@ -34,9 +34,6 @@ class World
         // Display-Lists for faster rendering
         GLuint importObjectDL;              // The Display-List for the imported object
 
-        GLuint starsDL;                     // The Display-List for the stars
-        GLuint groundPatchDL;               // The Display-List for the ground patches
-
         GLuint treeSmallDL;                 // The Display-List for the small trees
         GLuint treeNormalDL;                // The Display-List for the normal trees
         GLuint treeBigDL;                   // The Display-List for the big trees
@@ -48,9 +45,7 @@ class World
         Position2D lakePos = {10, 10};// Position of the lake
         Position2D fountainPos = {15, -10};// Position of the fountain (imported Object)
 
-
         float moonRot = 0;                  // Rotation of the moon (in degrees)
-
 
         Position2D housePosition = {-10, 10};
         Position2D cam1Position = {-49, 24};
@@ -67,23 +62,17 @@ class World
         Position2D camDest = {0, 0};
         float camRotation = 0;
 
-
         // LIGHTs
         bool moonLight = true;            // scene light on
 
         // Textures
-
         GLuint texture_trunk;               // texture for the trunk // Flag pole on tower
 
-        GLuint texture_ground;              // texture for the ground
         GLuint texture_fence;               // texture for the fence
         GLuint texture_grass;               // texture for the ground
         GLuint texture_plant;               // texture for the tree top
 
-
         GLuint texture_player_character;     // texture for the background of the minimap
-
-        const char * TEXTURE_GROUND_FILENAME    = "Data/gfx/ground.png";
 
         const char * TEXTURE_FENCE_FILENAME     = "Data/gfx/fence.png";
         const char * TEXTURE_PLANT_FILENAME     = "Data/gfx/plant.png";
@@ -91,8 +80,6 @@ class World
         const char * TEXTURE_GRASS_FILENAME     = "Data/gfx/grass.png";
 
         const char * TEXTURE_PLAYER_FILENAME      = "Data/gfx/player_face.png";
-
-
 
 
         const float FogColor[3]={0.2f,0.3f,0.5f}; // Define a nice light grey
@@ -106,13 +93,11 @@ class World
 
         bool checkCollision(float newX, float newZ);
         void updateCameras(void);
-        void resetGLColor(void);        // Resets the GL_DIFFUSE color to "default" values
+        static void resetGLColor(void);        // Resets the GL_DIFFUSE color to "default" values
     protected:
     private:
         // OBJECT GENERATION and World drawing
-        void createGroundPatchDL(void);
         void createImportedObjectDL(void);
-        void createStarDL(void);
         void createTreeDLs(void);
         void initTreePositions(void);
 

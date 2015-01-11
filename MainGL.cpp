@@ -539,7 +539,7 @@ void LoadTexture(const char * filename, GLuint &texture) {
 /**  Initializes the textures and sets their ID's **/
 void initTextures(void){
     // World textures
-    TextureManager::loadTextureDevil(world.TEXTURE_GROUND_FILENAME, world.texture_ground, false);
+
 
     TextureManager::loadTextureDevil(world.TEXTURE_FENCE_FILENAME, world.texture_fence, true);
     TextureManager::loadTextureDevil(world.TEXTURE_PLANT_FILENAME, world.texture_plant, false);
